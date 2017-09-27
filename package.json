@@ -1,0 +1,34 @@
+{
+  "name": "neat-http",
+  "version": "0.0.1",
+  "description": "Light-weight Client Promise wrap for raw http.request",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "neat-rr": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Node-utils/neat-http.git"
+  },
+  "keywords": [
+    "neat",
+    "http",
+    "client",
+    "request"
+  ],
+  "author": "zhuqiuyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Node-utils/neat-http/issues"
+  },
+  "homepage": "https://github.com/Node-utils/neat-http#readme"
+}
