@@ -21,7 +21,7 @@ const server = http.createServer(async function(sreq, sres) {
     headers: sreq.headers
   };
   const ext = {
-    body: sreq, // pipe server to client request
+    req: sreq, // pipe client request to server
     // timeout(Num): If None, Default is 15sec
     // toJSON(bool): Default is False.
   };
