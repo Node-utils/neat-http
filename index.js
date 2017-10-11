@@ -1,7 +1,6 @@
 'use strict';
 
-const send = require('./lib/send.js');
-const createClient = require('./lib/createClient.js');
-
-module.exports = send;
-module.exports.createClient = createClient;
+module.exports = require('./lib/send.js');
+module.exports.createClient = require('./lib/createClient.js');
+module.exports.LBClient = require('./lib/LBClient.js');
+module.exports.HostClient = require('./lib/HostClient.js');

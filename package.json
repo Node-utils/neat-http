@@ -1,6 +1,6 @@
 {
   "name": "neat-http",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Light-weight Client Promise wrap for raw http.request",
   "main": "index.js",
   "directories": {
