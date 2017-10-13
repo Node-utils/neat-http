@@ -16,6 +16,7 @@ const client = new neat_http.LBClient({
   rr: arr,
   healthCheckOpts: {},
   healthCheckFn: cres => cres.statusCode == 200,
+  healthCheckCycle: 3000, //ms, every cycle will check all hosts
 });
 
 (async() => {
