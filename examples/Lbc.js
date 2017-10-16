@@ -14,7 +14,9 @@ const client = new neat_http.LBClient({
   path: '/path'
 }, {
   rr: arr,
-  healthCheckOpts: {},
+  healthCheckOpts: {
+    path: '/ok.htm',
+  },
   healthCheckFn: cres => cres.statusCode == 200,
   healthCheckCycle: 3000, //ms, every cycle will check all hosts
 });
