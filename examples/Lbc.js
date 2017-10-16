@@ -14,8 +14,11 @@ const client = new neat_http.LBClient({
   path: '/path'
 }, {
   rr: arr,
-  healthCheckOpts: {},
+  healthCheckOpts: {
+    path: '/check',
+  },
   healthCheckFn: cres => cres.statusCode == 200,
+  healthCheckCycle: 3000, //ms, every cycle will check all hosts
 });
 
 (async() => {
@@ -23,4 +26,11 @@ const client = new neat_http.LBClient({
     console.log(await client.healthCheck());
   }
   console.log('done')
+  setInterval(() => {
+    client.send({
+      path: '/test/client'
+    }).catch(err => {
+      console.error(err)
+    })
+  }, 500)
 })()
