@@ -26,4 +26,11 @@ const client = new neat_http.LBClient({
     console.log(await client.healthCheck());
   }
   console.log('done')
+  setInterval(() => {
+    client.send({
+      path: '/test/client'
+    }).catch(err => {
+      console.error(err)
+    })
+  }, 500)
 })()
