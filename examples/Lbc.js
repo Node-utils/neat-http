@@ -14,6 +14,7 @@ const client = new neat_http.LBClient({
   path: '/path'
 }, {
   rr: arr,
+  timeout: 5000,
   healthCheckOpts: {
     path: '/check',
   },
