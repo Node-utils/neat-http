@@ -88,4 +88,4 @@ const client = new neat_http.LBClient({
 The same as default `neat-http`(request).
 
 ### Class: neat_http.HostClient
-### Class: neat_http.createClient
+### Class: neat_http.createRequest
